@@ -1,0 +1,7 @@
+{
+  "name": "ioyab-front",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
