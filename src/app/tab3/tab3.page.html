@@ -12,6 +12,15 @@
       <ion-title size="large">Roulette</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Roulette page"></app-explore-container>
+  <form (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label>Liste des participants ?</ion-label>
+      <ion-input placeholder="Dupond;Durant;Untel" [(ngModel)]="random.participants" name="participants"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nombre de gagnants ?</ion-label>
+      <ion-input type="number" [(ngModel)]="random.nombre" name="nombre"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Afficher les gagnants</button>
+  </form>
 </ion-content>
