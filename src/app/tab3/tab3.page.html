@@ -14,13 +14,15 @@
   </ion-header>
   <form (ngSubmit)="logForm()">
     <ion-item>
-      <ion-label>Liste des participants ?</ion-label>
-      <ion-input placeholder="Dupond;Durant;Untel" [(ngModel)]="random.participants" name="participants"></ion-input>
+      <ion-label>Liste des participants ?
+        <ion-input placeholder="Dupond;Durant;Untel" [(ngModel)]="random.participants" name="participants"></ion-input>
+      </ion-label>
     </ion-item>
     <ion-item>
-      <ion-label>Nombre de gagnants ?</ion-label>
-      <ion-input type="number" [(ngModel)]="random.nombre" name="nombre"></ion-input>
+      <ion-label>Nombre de gagnants ?
+        <ion-input type="number" [(ngModel)]="random.nombre" name="nombre"></ion-input>
+      </ion-label>
     </ion-item>
-    <button ion-button type="submit" block>Afficher les gagnants</button>
+    <ion-button type="submit" block>Afficher les gagnants</ion-button>
   </form>
 </ion-content>
