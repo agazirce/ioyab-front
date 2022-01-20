@@ -1,10 +1,16 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
+  <ion-row>
+    <ion-col size="3">
+      <ion-icon size="large" name="menu-outline"></ion-icon>
+    </ion-col>
+    <ion-col>
+    </ion-col>
+    <ion-col size="3">
+      <ion-icon size="large" name="person-circle-outline"></ion-icon>
+    </ion-col>
+  </ion-row>
 </ion-header>
+
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -13,5 +19,6 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <app-group-list name="Groupes"></app-group-list>
+  <app-new-group name="Nouveau groupe"></app-new-group>
 </ion-content>

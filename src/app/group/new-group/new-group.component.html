@@ -1,0 +1,17 @@
+<div>
+  <form (ngSubmit)="groupForm()">
+    <ion-item>
+      <ion-label>Nom</ion-label>
+      <ion-input placeholder="nom du groupe" [(ngModel)]="group.name" name="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-input placeholder="type du groupe" [(ngModel)]="group.type" name="type"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Membre(s)</ion-label>
+      <ion-input placeholder="membre(s) du groupe" [(ngModel)]="group.members" name="members" disabled></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Ajouter</button>
+  </form>
+</div>
