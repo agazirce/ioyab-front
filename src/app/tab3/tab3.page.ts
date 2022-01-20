@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpHeaders } from '@angular/common/http';
 import { HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
@@ -10,30 +9,24 @@ import {Observable} from 'rxjs';
 })
 export class Tab3Page {
   random: any = { }
-
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Access-Control-Allow-Origin':'*',
-      'Authorization':'authkey',
-      'userid':'1'
-    })
-  };
+  number: number
+  players: string
+  result: any
 
   constructor(private http:HttpClient) {
     this.http = http;
   }
 
-/*  userAPI(data): Observable<any> {
-    return this.http.get(`http://localhost:8080/api/random/${number}/${players}`, httpOptions)
-      .pipe(
-        tap((result) => console.log('result-->',result)),
-        catchError(this.handleError('error', []))
-      );
-  }*/
+  userAPI(): Observable<any> {
+    return this.http.get<any>(`http://localhost:8080/api/random/${this.number}/${this.players}`);
+  }
+
   logForm() {
-    let number = this.random.nombre ? this.random.nombre : 1
-    let players = this.random.participants
-    console.log(this.http.get(`http://localhost:8080/api/random/${number}/${players}`, this.httpOptions))
-    console.log(this.random)
+    this.number = this.random.nombre ? this.random.nombre : 1
+    this.players = this.random.participants
+    console.log(this.number)
+    console.log(this.players)
+    this.userAPI().subscribe(result => this.result = result)
+    console.log(this.result)
   }
 }
