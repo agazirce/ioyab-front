@@ -1,0 +1,29 @@
+ion-card {
+  width: 44vw;
+  margin: 0;
+  min-height: 15vh;
+  ion-icon {
+    font-size: 5em;
+    padding-left: 10px;
+  }
+  .big {
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .text {
+    font-size: x-small;
+    &.right {
+      text-align: end;
+      bottom: 0;
+    }
+  }
+}
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
